@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body">
+
+    <body onload="carregar()">
+        <header>
+            <h1>Comic Shop</h1>
+            <fieldset>
+                <legend>Menu</legend>
+                <ul>
+                    <li><a href="/">Consulta</a></li>
+                    <li><a href="/cadastro/">Cadastro</a></li>
+                </ul>
+            </fieldset>
+        </header>
+        <br/>
+        <main>
+            <fieldset>
+                <legend>Cadastro do Usuário</legend>
+                Nome:<br />
+                <input id="txtNome" type="text" required="true" /><br />
+                Email:<br />
+                <input id="txtEmail" type="email" required /><br />
+                Data de Nascimento:<br />
+                <input id="txtDataNasc" type="date" /><br />
+                Sexo:<br />
+                <select id="cbxSexo" title="sexo">
+                    <option value=" ">-- Selecione uma opção --</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select><br />
+                Endereço:<br />
+                <input id="txtEndereco" type="text" /><br />
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend>Dados de acesso</legend>
+                Login:<br />
+                <input id="txtLogin" type="text" /><br />
+                Senha:<br />
+                <input id="txtSenha" type="password" />
+            </fieldset>
+            <br />
+            <button id="btnCadastrar" type="button" onclick="cadastrar()">Incluir</button>
+            <!-- <button id="btnTestaApi" type="button" onclick="testarApi()">Testar API</button> -->
+        </main>
+        <footer>
+            <hr />
+            Footer
+        </footer>
+
+        <script src="/scripts.js" />
+    </body>
+
+</html>
