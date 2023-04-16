@@ -80,9 +80,9 @@ function criarLinha(pessoa){
     const linha = document.createElement("tr");
     const tdlogin = document.createElement("td");
     tdlogin.setAttribute("id", pessoa.login);
-
+    
     const link = document.createElement('a');
-    link.href = "./cadastro/?login=" + pessoa.login;
+    link.href = "https://maximofelix.github.io/comic-shop/v02/usuarios/cadastro/?login=" + pessoa.login;
     link.target = '_top'
     link.innerHTML = pessoa.login;
     tdlogin.appendChild(link)
@@ -137,9 +137,7 @@ function cadastrar() {
         login : document.getElementById("txtLogin").value,
         senha : document.getElementById("txtSenha").value
     }
-     
-    //document.getElementById(pessoa.login)
-
+    
     if (pessoa.login.trim() == "") {
         alert("Login é obrigatório");
     }
@@ -149,9 +147,6 @@ function cadastrar() {
     else if (pessoa.nome.trim() == "") {
         alert("Nome é obrigatório");
     }
-    //else if (pessoas.indexOf(pessoa.login) > 0) {
-    //    alert("login já cadastrado");
-    //}
     else {
         
         // Excluir se já existir
@@ -159,37 +154,14 @@ function cadastrar() {
         if (index >= 0){
             const x = pessoas.splice(index, 1);
         }
-        // Adicionar
+        // Adicionar no vetor
         pessoas.push(pessoa);
         // grava no armazenamento
         localStorage.setItem("usuarios", JSON.stringify(pessoas))
 
-        //const tabela = document.getElementById("tabUsuarios");
-
-        /*const linha = document.createElement("tr");
-        const tdlogin = document.createElement("td");
-        tdlogin.setAttribute("id", pessoa.login);
-        tdlogin.innerHTML = pessoa.login;
-        linha.appendChild(tdlogin);
-        
-        const tdnome = document.createElement("td");
-        tdnome.innerHTML = pessoa.nome;
-        linha.appendChild(tdnome);
-        const tdsexo = document.createElement("td");
-        tdsexo.innerHTML = pessoa.sexo;
-        linha.appendChild(tdsexo);
-        const tdemail = document.createElement("td");
-        tdemail.innerHTML = pessoa.email;
-        linha.appendChild(tdemail);
-        const tddatanasc = document.createElement("td");
-        tddatanasc.innerHTML = pessoa.dataNasc;
-        linha.appendChild(tddatanasc);*/
-
-        //tabela.appendChild(criarLinha(pessoa))
-
         alert("Usuário cadastrado com sucesso!");
     }
-    window.location.href = "/";
+    window.location.href = "https://maximofelix.github.io/comic-shop/v02/usuarios/";
 }
 
 function excluir(login){
@@ -198,7 +170,7 @@ function excluir(login){
         const x = pessoas.splice(index, 1);
         localStorage.setItem("usuarios", JSON.stringify(pessoas))
         alert('[' + login + '] excluído com sucesso')
-        window.location.href = "/";
+        window.location.href = "https://maximofelix.github.io/comic-shop/v02/usuarios/";
     }
 }
 
