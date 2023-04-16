@@ -6,7 +6,27 @@ function atualizar(){
     if (pessoas == null)
         return;
     const tabela = document.getElementById("tabUsuarios");
-    pessoas.forEach(pessoa => {    
+    //  tabela.childNodes.forEach(linha => {
+    //      input.log('removendo '  + linha)
+    // //     // tabela.removeChild(linha)
+    //  });
+    
+     const filtrado = []
+     console.log('check...: ' + document.getElementById("chkFeminino").checked);
+     if (document.getElementById("chkFeminino").checked){
+            const filtro = filtrado.concat(pessoas.filter((p) => p.sexo == "F"))
+            while (filtro.length) {
+                filtrado.push(filtro.shift());
+            }
+    }
+    if (document.getElementById("chkMasculino").checked){
+            const filtro = filtrado.concat(pessoas.filter((p) => p.sexo == "M"))
+            while (filtro.length) {
+                filtrado.push(filtro.shift());
+            }
+    }
+
+     filtrado.forEach(pessoa => {    
         tabela.appendChild(criarLinha(pessoa));
     });
 }
@@ -169,7 +189,7 @@ function cadastrar() {
 
         alert("Usuário cadastrado com sucesso!");
     }
-    window.location.href = "./consulta.html";
+    window.location.href = "/";
 }
 
 function excluir(login){
@@ -178,6 +198,7 @@ function excluir(login){
         const x = pessoas.splice(index, 1);
         localStorage.setItem("usuarios", JSON.stringify(pessoas))
         alert('[' + login + '] excluído com sucesso')
+        window.location.href = "/";
     }
 }
 
