@@ -82,7 +82,7 @@ function criarLinha(pessoa){
     tdlogin.setAttribute("id", pessoa.login);
     
     const link = document.createElement('a');
-    link.href = "https://maximofelix.github.io/comic-shop/v02/usuarios/cadastro/?login=" + pessoa.login;
+    link.href = "../cadastro/?login=" + pessoa.login;
     link.target = '_top'
     link.innerHTML = pessoa.login;
     tdlogin.appendChild(link)
@@ -161,7 +161,7 @@ function cadastrar() {
 
         alert("Usuário cadastrado com sucesso!");
     }
-    window.location.href = "https://maximofelix.github.io/comic-shop/v02/usuarios/";
+    window.location.href = "../";
 }
 
 function excluir(login){
@@ -170,7 +170,7 @@ function excluir(login){
         const x = pessoas.splice(index, 1);
         localStorage.setItem("usuarios", JSON.stringify(pessoas))
         alert('[' + login + '] excluído com sucesso')
-        window.location.href = "https://maximofelix.github.io/comic-shop/v02/usuarios/";
+        window.location.href = "../";
     }
 }
 
