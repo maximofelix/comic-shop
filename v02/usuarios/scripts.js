@@ -1,5 +1,5 @@
 // Lê o localStorage e se não existir a entrada, cria uma lista vazia
-const pessoas = JSON.parse(localStorage.getItem("usuarios") || [])
+const pessoas = JSON.parse(localStorage.getItem("usuarios")) || []
 
 function atualizar(){
     console.log('atualizar()')
