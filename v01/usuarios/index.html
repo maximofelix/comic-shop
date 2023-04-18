@@ -7,9 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="../imagens/logo-small.png"/>
+    <img src="../imagens/logo-small.png" />
     <h1>Comic-Shop</h1>
-    <h1>Usuários</h1>
+    <h3>Versão 1.0</h3>
+    <hr/>
+    <h2>Usuários</h2>
     <a href="incluir/">Novo</a><br/>
     <table id="tabUsuarios">
         <tr>
@@ -19,6 +21,22 @@
             <th>Email</th>
             <th>Data Nasc</th>
             <th>Opções</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="txtFiltroLogin"/></td>
+            <td><input type="text" id="txtFiltroNome"/></td>
+            <td>
+                <select id="cbxFiltroSexo" title="sexo">
+                    <option value=" "> </option>
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+            </td>
+            <td><input type="text" id="txtFiltroLogin"/></td>
+            <td><input type="text" id="txtFiltroDataNasc"/></td>
+            <td>
+                <button type="button" id="btnFiltrar">Filtrar</button>
+            </td>
         </tr>
         <tr>
             <td>spiderman</td>
@@ -31,6 +49,38 @@
                 <button type="button" id="btnExcluir">Excluir</button>
             </td>
         </tr>
+        <tr>
+            <td>ironman</td>
+            <td>Tony Stark</td>
+            <td>M</td>
+            <td>ironman@avengers.com</td>
+            <td>02/02/1998</td>
+            <td>
+                <button type="button" id="btnAlterar">Alterar</button>
+                <button type="button" id="btnExcluir">Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>thor</td>
+            <td>Thor Odinson</td>
+            <td>M</td>
+            <td>thor@avengers.com</td>
+            <td>03/11/1412</td>
+            <td>
+                <button type="button" id="btnAlterar">Alterar</button>
+                <button type="button" id="btnExcluir">Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>blackwidow</td>
+            <td>Natasha Romanov</td>
+            <td>F</td>
+            <td>blackwidow@avengers.com</td>
+            <td>07/05/2004</td>
+            <td>
+                <button type="button">Alterar</button>
+                <button type="button">Excluir</button>
+            </td>
         </tr>
         <tr>
             <td>batman</td>
@@ -43,13 +93,45 @@
                 <button type="button">Excluir</button>
             </td>
         </tr>
-        </tr>
         <tr>
             <td>superman</td>
             <td>Clark Kent</td>
             <td>M</td>
-            <td>superan@lja.com</td>
+            <td>superman@lja.com</td>
             <td>04/07/1999</td>
+            <td>
+                <button type="button">Alterar</button>
+                <button type="button">Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>supergirl</td>
+            <td>Linda Danvers</td>
+            <td>F</td>
+            <td>supergirl@lja.com</td>
+            <td>02/01/2007</td>
+            <td>
+                <button type="button">Alterar</button>
+                <button type="button">Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>greenlantern</td>
+            <td>Hall Jordam</td>
+            <td>M</td>
+            <td>greenlantern2814a@glcorps.oa</td>
+            <td>08/06/2003</td>
+            <td>
+                <button type="button">Alterar</button>
+                <button type="button">Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>wonderwoman</td>
+            <td>Diana Prince</td>
+            <td>F</td>
+            <td>wonderwoman@lja.com</td>
+            <td>17/03/2005</td>
             <td>
                 <button type="button">Alterar</button>
                 <button type="button">Excluir</button>
@@ -58,6 +140,7 @@
     </table>
     
     <br/>
+    <hr/>
     <a href="../">Voltar</a><br/>
 </body>
 </html>

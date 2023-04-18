@@ -1,56 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
-<body onload="atualizar()">
-    <header>
-        <h1>Comic Shop</h1>
-        <fieldset>
-            <legend>Menu</legend>
-            <ul>
-                <li><a href="../usuarios/">Consulta</a></li>
-                <li><a href="../usuarios/cadastro/">Cadastro</a></li>
-            </ul>
-        </fieldset>
-    </header>
+<body>
+    <img src="../imagens/logo-small.png" />
+    <h1>Comic-Shop</h1>
+    <h3>Versão 2.0</h3>
+    <hr/>
+    <h2>Usuários</h2>
+    <a href="incluir/">Novo</a><br/>
+    <table id="tabUsuarios">
+        <tr>
+            <th>Login</th>
+            <th>Nome</th>
+            <th>Sexo</th>
+            <th>Email</th>
+            <th>Data Nasc</th>
+            <th>Opções</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="txtFiltroLogin"/></td>
+            <td><input type="text" id="txtFiltroNome"/></td>
+            <td>
+                <select id="cbxFiltroSexo" title="sexo">
+                    <option value=" "> </option>
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+            </td>
+            <td><input type="text" id="txtFiltroLogin"/></td>
+            <td><input type="text" id="txtFiltroDataNasc"/></td>
+            <td>
+                <button type="button" id="btnFiltrar">Filtrar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>spiderman</td>
+            <td>Peter Parker</td>
+            <td>M</td>
+            <td>spiderman@avengers.com</td>
+            <td>01/01/2000</td>
+            <td>
+                <button type="button" id="btnAlterar">Alterar</button>
+                <button type="button" id="btnExcluir">Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>ironman</td>
+            <td>Tony Stark</td>
+            <td>M</td>
+            <td>ironman@avengers.com</td>
+            <td>02/02/1998</td>
+            <td>
+                <button type="button" id="btnAlterar">Alterar</button>
+                <button type="button" id="btnExcluir">Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>thor</td>
+            <td>Thor Odinson</td>
+            <td>M</td>
+            <td>thor@avengers.com</td>
+            <td>03/11/1412</td>
+            <td>
+                <button type="button" id="btnAlterar">Alterar</button>
+                <button type="button" id="btnExcluir">Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>blackwidow</td>
+            <td>Natasha Romanov</td>
+            <td>F</td>
+            <td>blackwidow@avengers.com</td>
+            <td>07/05/2004</td>
+            <td>
+                <button type="button">Alterar</button>
+                <button type="button">Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>batman</td>
+            <td>Bruce Wayne</td>
+            <td>M</td>
+            <td>batman@lja.com</td>
+            <td>05/03/2001</td>
+            <td>
+                <button type="button">Alterar</button>
+                <button type="button">Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>superman</td>
+            <td>Clark Kent</td>
+            <td>M</td>
+            <td>superman@lja.com</td>
+            <td>04/07/1999</td>
+            <td>
+                <button type="button">Alterar</button>
+                <button type="button">Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>supergirl</td>
+            <td>Linda Danvers</td>
+            <td>F</td>
+            <td>supergirl@lja.com</td>
+            <td>02/01/2007</td>
+            <td>
+                <button type="button">Alterar</button>
+                <button type="button">Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>greenlantern</td>
+            <td>Hall Jordam</td>
+            <td>M</td>
+            <td>greenlantern2814a@glcorps.oa</td>
+            <td>08/06/2003</td>
+            <td>
+                <button type="button">Alterar</button>
+                <button type="button">Excluir</button>
+            </td>
+        </tr>
+        <tr>
+            <td>wonderwoman</td>
+            <td>Diana Prince</td>
+            <td>F</td>
+            <td>wonderwoman@lja.com</td>
+            <td>17/03/2005</td>
+            <td>
+                <button type="button">Alterar</button>
+                <button type="button">Excluir</button>
+            </td>
+        </tr>
+    </table>
+    
     <br/>
-    <main>
-        <fieldset>
-            <legend>
-                Consultar Usuários
-            </legend>
-  
-            <table id="tabUsuarios">
-                <tr>
-                    <th>Login</th>
-                    <th>Nome</th>
-                    <th>Sexo</th>
-                    <th>Email</th>
-                    <th>Data Nasc</th>
-                    <th></th>
-                </tr>
-            </table>
-            <button id="btnAtualizar" type="button" onclick="atualizar()">Atualizar</button>
-            <fieldset>
-                <input type="checkbox" id="chkMasculino" checked="true" onchange="atualizar()">Masculino</input>
-                <input type="checkbox" id="chkFeminino" checked="true" onchange="atualizar()">Feminino</input>
-            </fieldset>
-        </fieldset>
-    </main>
-
-    <footer>
-        <hr />
-        Footer
-    </footer>
-
-    <script src="scripts.js"></script>
-    <!-- <script src="../usuarios/scripts.js" /> -->
+    <hr/>
+    <a href="../">Voltar</a><br/>
 </body>
-
 </html>

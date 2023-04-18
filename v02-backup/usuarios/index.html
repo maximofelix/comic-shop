@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="atualizar()">
+    <header>
+        <h1>Comic Shop</h1>
+        <fieldset>
+            <legend>Menu</legend>
+            <ul>
+                <li><a href="../usuarios/">Consulta</a></li>
+                <li><a href="../usuarios/cadastro/">Cadastro</a></li>
+            </ul>
+        </fieldset>
+    </header>
+    <br/>
+    <main>
+        <fieldset>
+            <legend>
+                Consultar Usuários
+            </legend>
+  
+            <table id="tabUsuarios">
+                <tr>
+                    <th>Login</th>
+                    <th>Nome</th>
+                    <th>Sexo</th>
+                    <th>Email</th>
+                    <th>Data Nasc</th>
+                    <th></th>
+                </tr>
+            </table>
+            <button id="btnAtualizar" type="button" onclick="atualizar()">Atualizar</button>
+            <fieldset>
+                <input type="checkbox" id="chkMasculino" checked="true" onchange="atualizar()">Masculino</input>
+                <input type="checkbox" id="chkFeminino" checked="true" onchange="atualizar()">Feminino</input>
+            </fieldset>
+        </fieldset>
+    </main>
+
+    <footer>
+        <hr />
+        Footer
+    </footer>
+
+    <script src="scripts.js"></script>
+    <!-- <script src="../usuarios/scripts.js" /> -->
+</body>
+
+</html>
