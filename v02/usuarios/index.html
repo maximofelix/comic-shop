@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="iniciarGrade()">
     <img src="../imagens/logo-small.png" />
     <h1>Comic-Shop</h1>
     <h3>Versão 2.0</h3>
+    <div id="divStatus">offline</div>
     <hr/>
     <h2>Usuários</h2>
     <a href="incluir/">Novo</a><br/>
@@ -33,108 +34,9 @@
                 </select>
             </td>
             <td><input type="text" id="txtFiltroLogin"/></td>
-            <td><input type="text" id="txtFiltroDataNasc"/></td>
+            <td><input type="date" id="txtFiltroDataNasc"/></td>
             <td>
                 <button type="button" id="btnFiltrar">Filtrar</button>
-            </td>
-        </tr>
-        <tr>
-            <td>spiderman</td>
-            <td>Peter Parker</td>
-            <td>M</td>
-            <td>spiderman@avengers.com</td>
-            <td>01/01/2000</td>
-            <td>
-                <button type="button" id="btnAlterar">Alterar</button>
-                <button type="button" id="btnExcluir">Excluir</button>
-            </td>
-        </tr>
-        <tr>
-            <td>ironman</td>
-            <td>Tony Stark</td>
-            <td>M</td>
-            <td>ironman@avengers.com</td>
-            <td>02/02/1998</td>
-            <td>
-                <button type="button" id="btnAlterar">Alterar</button>
-                <button type="button" id="btnExcluir">Excluir</button>
-            </td>
-        </tr>
-        <tr>
-            <td>thor</td>
-            <td>Thor Odinson</td>
-            <td>M</td>
-            <td>thor@avengers.com</td>
-            <td>03/11/1412</td>
-            <td>
-                <button type="button" id="btnAlterar">Alterar</button>
-                <button type="button" id="btnExcluir">Excluir</button>
-            </td>
-        </tr>
-        <tr>
-            <td>blackwidow</td>
-            <td>Natasha Romanov</td>
-            <td>F</td>
-            <td>blackwidow@avengers.com</td>
-            <td>07/05/2004</td>
-            <td>
-                <button type="button">Alterar</button>
-                <button type="button">Excluir</button>
-            </td>
-        </tr>
-        <tr>
-            <td>batman</td>
-            <td>Bruce Wayne</td>
-            <td>M</td>
-            <td>batman@lja.com</td>
-            <td>05/03/2001</td>
-            <td>
-                <button type="button">Alterar</button>
-                <button type="button">Excluir</button>
-            </td>
-        </tr>
-        <tr>
-            <td>superman</td>
-            <td>Clark Kent</td>
-            <td>M</td>
-            <td>superman@lja.com</td>
-            <td>04/07/1999</td>
-            <td>
-                <button type="button">Alterar</button>
-                <button type="button">Excluir</button>
-            </td>
-        </tr>
-        <tr>
-            <td>supergirl</td>
-            <td>Linda Danvers</td>
-            <td>F</td>
-            <td>supergirl@lja.com</td>
-            <td>02/01/2007</td>
-            <td>
-                <button type="button">Alterar</button>
-                <button type="button">Excluir</button>
-            </td>
-        </tr>
-        <tr>
-            <td>greenlantern</td>
-            <td>Hall Jordam</td>
-            <td>M</td>
-            <td>greenlantern2814a@glcorps.oa</td>
-            <td>08/06/2003</td>
-            <td>
-                <button type="button">Alterar</button>
-                <button type="button">Excluir</button>
-            </td>
-        </tr>
-        <tr>
-            <td>wonderwoman</td>
-            <td>Diana Prince</td>
-            <td>F</td>
-            <td>wonderwoman@lja.com</td>
-            <td>17/03/2005</td>
-            <td>
-                <button type="button">Alterar</button>
-                <button type="button">Excluir</button>
             </td>
         </tr>
     </table>
@@ -142,5 +44,6 @@
     <br/>
     <hr/>
     <a href="../">Voltar</a><br/>
+    <script src="pessoas.js"></script>
 </body>
 </html>
